@@ -12,21 +12,18 @@ namespace APIVerve.API.CurrencyConverter
     {
         /// <summary>
         /// The amount to convert
-        /// Example: 1
         /// </summary>
         [JsonProperty("value")]
         public string Value { get; set; }
 
         /// <summary>
-        /// The currency code to convert from
-        /// Example: USD
+        /// The ISO 4217 currency code to convert from
         /// </summary>
         [JsonProperty("from")]
         public string From { get; set; }
 
         /// <summary>
-        /// The currency code to convert to
-        /// Example: EUR
+        /// The ISO 4217 currency code to convert to
         /// </summary>
         [JsonProperty("to")]
         public string To { get; set; }
