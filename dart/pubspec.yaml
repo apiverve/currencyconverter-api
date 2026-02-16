@@ -1,0 +1,16 @@
+name: apiverve_currencyconverter
+description: Currency Converter is a simple tool for converting currency rates. It returns the converted currency rate based on the amount and currency provided.
+version: 1.1.14
+homepage: https://currencyconverter.apiverve.com?utm_source=dart&utm_medium=homepage
+repository: https://github.com/apiverve/currencyconverter-api/tree/main/dart
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  http: ^1.1.0
+  http_parser: ^4.0.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0
