@@ -44,7 +44,11 @@ from apiverve_currencyconverter.apiClient import CurrencyconverterAPIClient
 # Initialize the client with your APIVerve API key
 api = CurrencyconverterAPIClient("[YOUR_API_KEY]")
 
-query = { "value": 1, "from": "USD", "to": "EUR" }
+query = {
+    "value": 1,
+    "from": "USD",
+    "to": "EUR"
+}
 
 try:
     # Make the API call
@@ -82,7 +86,11 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "value": 1, "from": "USD", "to": "EUR" }
+query = {
+    "value": 1,
+    "from": "USD",
+    "to": "EUR"
+}
 ```
 
 ###### Simple Request
@@ -123,7 +131,11 @@ from apiverve_currencyconverter.apiClient import CurrencyconverterAPIClient, Cur
 
 api = CurrencyconverterAPIClient("[YOUR_API_KEY]")
 
-query = { "value": 1, "from": "USD", "to": "EUR" }
+query = {
+    "value": 1,
+    "from": "USD",
+    "to": "EUR"
+}
 
 try:
     result = api.execute(query)
@@ -144,7 +156,11 @@ from apiverve_currencyconverter.apiClient import CurrencyconverterAPIClient, Cur
 
 api = CurrencyconverterAPIClient("[YOUR_API_KEY]")
 
-query = { "value": 1, "from": "USD", "to": "EUR" }
+query = {
+    "value": 1,
+    "from": "USD",
+    "to": "EUR"
+}
 
 try:
     result = api.execute(query)
@@ -178,7 +194,11 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_currencyconverter.apiClient import CurrencyconverterAPIClient, CurrencyconverterAPIClientError
 
-query = { "value": 1, "from": "USD", "to": "EUR" }
+query = {
+    "value": 1,
+    "from": "USD",
+    "to": "EUR"
+}
 
 # Using context manager ensures proper cleanup
 with CurrencyconverterAPIClient("[YOUR_API_KEY]") as api:
@@ -204,7 +224,11 @@ from apiverve_currencyconverter.apiClient import CurrencyconverterAPIClient
 # Enable debug mode
 api = CurrencyconverterAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "value": 1, "from": "USD", "to": "EUR" }
+query = {
+    "value": 1,
+    "from": "USD",
+    "to": "EUR"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -219,8 +243,13 @@ from apiverve_currencyconverter.apiClient import CurrencyconverterAPIClient
 
 api = CurrencyconverterAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "value": 1,
+    "from": "USD",
+    "to": "EUR"
+}
+
 try:
-    query = { "value": 1, "from": "USD", "to": "EUR" }
     result = api.execute(query)
     print(result)
 finally:
