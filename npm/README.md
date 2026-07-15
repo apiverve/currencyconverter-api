@@ -131,7 +131,13 @@ async function makeRequest() {
     "from": "USD",
     "to": "EUR",
     "value": 1,
-    "convertedValue": 0.95466
+    "convertedValue": 0.921456,
+    "rate": 0.921456,
+    "change24h": -0.002134,
+    "change24hPct": -0.2312,
+    "changeDirection": "down",
+    "high24h": 0.924521,
+    "low24h": 0.919823
   }
 }
 ```
