@@ -17,11 +17,14 @@ def call_currencyconverter_api():
     Make a GET request to the Currency Converter API
     """
     try:
+        # Query parameters
+        params &#x3D; {&#x27;value&#x27;: 1, &#x27;from&#x27;: &#x27;USD&#x27;, &#x27;to&#x27;: &#x27;EUR&#x27;}
+
         headers = {
             'x-api-key': API_KEY
         }
 
-        response = requests.get(API_URL, headers=headers)
+        response = requests.get(API_URL, headers=headers, params=params)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
