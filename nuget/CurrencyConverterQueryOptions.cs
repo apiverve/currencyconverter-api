@@ -14,7 +14,7 @@ namespace APIVerve.API.CurrencyConverter
         /// The amount to convert
         /// </summary>
         [JsonProperty("value")]
-        public string Value { get; set; }
+        public double Value { get; set; }
 
         /// <summary>
         /// The ISO 4217 currency code to convert from
