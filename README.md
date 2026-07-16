@@ -193,11 +193,37 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Currency Converter API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "from": "USD",
+    "to": "EUR",
+    "value": 1,
+    "convertedValue": 0.921456,
+    "rate": 0.921456,
+    "change24h": -0.002134,
+    "change24hPct": -0.2312,
+    "changeDirection": "down",
+    "high24h": 0.924521,
+    "low24h": 0.919823
+  }
 }
 ```
 
