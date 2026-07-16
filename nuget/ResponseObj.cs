@@ -25,6 +25,9 @@ namespace APIVerve.API.CurrencyConverter
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -36,9 +39,39 @@ namespace APIVerve.API.CurrencyConverter
         public string To { get; set; }
 
         [JsonProperty("value")]
-        public long Value { get; set; }
+        public long? Value { get; set; }
 
         [JsonProperty("convertedValue")]
-        public double ConvertedValue { get; set; }
+        public double? ConvertedValue { get; set; }
+
+        [JsonProperty("rate")]
+        public double? Rate { get; set; }
+
+        [JsonProperty("change24h")]
+        public double? Change24H { get; set; }
+
+        [JsonProperty("change24hPct")]
+        public double? Change24HPct { get; set; }
+
+        [JsonProperty("changeDirection")]
+        public string ChangeDirection { get; set; }
+
+        [JsonProperty("high24h")]
+        public double? High24H { get; set; }
+
+        [JsonProperty("low24h")]
+        public double? Low24H { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
