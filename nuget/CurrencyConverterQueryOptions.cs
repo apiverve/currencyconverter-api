@@ -27,5 +27,11 @@ namespace APIVerve.API.CurrencyConverter
         /// </summary>
         [JsonProperty("to")]
         public string To { get; set; }
+
+        /// <summary>
+        /// Optional past date (YYYY-MM-DD) to use that day's closing rates instead of live rates. History runs from 1999-01-04 for about 30 major currencies and covers every supported currency from March 2024. A day with no rates, such as a weekend or holiday, uses the last close before it.
+        /// </summary>
+        [JsonProperty("date")]
+        public string Date { get; set; }
     }
 }

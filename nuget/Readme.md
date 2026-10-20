@@ -1,13 +1,12 @@
-CurrencyConverter API
+Currency Converter API
 ============
 
-Currency Converter is a simple tool for converting currency rates. It returns the converted currency rate based on the amount and currency provided.
+Currency Converter calculates foreign exchange conversions across 170+ currencies using real-time rates. Pass an amount with source and target currency codes to receive the converted total, exchange rate, and 24-hour trend direction.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a .NET Wrapper for the [CurrencyConverter API](https://currencyconverter.apiverve.com?utm_source=nuget&utm_medium=readme)
+[![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.CurrencyConverter.svg)](https://www.nuget.org/packages/APIVerve.API.CurrencyConverter)
+
+This is a .NET wrapper for the [Currency Converter API](https://apiverve.com/marketplace/currencyconverter?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -40,8 +39,8 @@ From within Visual Studio:
 
 ## Configuration
 
-Before using the currencyconverter API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=readme)
+Before using the Currency Converter API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -61,10 +60,11 @@ class Program
         var apiClient = new CurrencyConverterAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new CurrencyConverterQueryOptions {
-    Value = 1,
-    From = "USD",
-    To = "EUR"
-};
+            Value = 1,
+            From = "USD",
+            To = "EUR",
+            Date = "2025-06-02"
+        };
 
         // Make the API call
         try
@@ -94,13 +94,13 @@ class Program
 
 ## Usage
 
-The CurrencyConverter API documentation is found here: [https://docs.apiverve.com/ref/currencyconverter](https://docs.apiverve.com/ref/currencyconverter?utm_source=nuget&utm_medium=readme).
+The Currency Converter API documentation is found here: [https://docs.apiverve.com/ref/currencyconverter](https://docs.apiverve.com/ref/currencyconverter?utm_source=nuget&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ###### Authentication
-CurrencyConverter API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
+Currency Converter API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
 
 ```csharp
 // Create an instance of the API client
@@ -127,10 +127,11 @@ public class Example
         var apiClient = new CurrencyConverterAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new CurrencyConverterQueryOptions {
-    Value = 1,
-    From = "USD",
-    To = "EUR"
-};
+            Value = 1,
+            From = "USD",
+            To = "EUR",
+            Date = "2025-06-02"
+        };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
 
@@ -161,10 +162,11 @@ public class Example
         var apiClient = new CurrencyConverterAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new CurrencyConverterQueryOptions {
-    Value = 1,
-    From = "USD",
-    To = "EUR"
-};
+            Value = 1,
+            From = "USD",
+            To = "EUR",
+            Date = "2025-06-02"
+        };
 
         var response = apiClient.Execute(queryOptions);
 
@@ -200,10 +202,11 @@ public class Example
         var apiClient = new CurrencyConverterAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new CurrencyConverterQueryOptions {
-    Value = 1,
-    From = "USD",
-    To = "EUR"
-};
+            Value = 1,
+            From = "USD",
+            To = "EUR",
+            Date = "2025-06-02"
+        };
 
         try
         {
@@ -258,10 +261,11 @@ public class Example
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
         var queryOptions = new CurrencyConverterQueryOptions {
-    Value = 1,
-    From = "USD",
-    To = "EUR"
-};
+            Value = 1,
+            From = "USD",
+            To = "EUR",
+            Date = "2025-06-02"
+        };
 
         try
         {
@@ -303,7 +307,8 @@ apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 var queryOptions = new CurrencyConverterQueryOptions {
     Value = 1,
     From = "USD",
-    To = "EUR"
+    To = "EUR",
+    Date = "2025-06-02"
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -331,7 +336,8 @@ apiClient.SetLogger(message =>
 var queryOptions = new CurrencyConverterQueryOptions {
     Value = 1,
     From = "USD",
-    To = "EUR"
+    To = "EUR",
+    Date = "2025-06-02"
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -351,7 +357,8 @@ apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (defau
 var queryOptions = new CurrencyConverterQueryOptions {
     Value = 1,
     From = "USD",
-    To = "EUR"
+    To = "EUR",
+    Date = "2025-06-02"
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -365,7 +372,8 @@ The API client implements `IDisposable` for proper resource cleanup:
 var queryOptions = new CurrencyConverterQueryOptions {
     Value = 1,
     From = "USD",
-    To = "EUR"
+    To = "EUR",
+    Date = "2025-06-02"
 };
 
 using (var apiClient = new CurrencyConverterAPIClient("[YOUR_API_KEY]"))
@@ -388,13 +396,14 @@ using (var apiClient = new CurrencyConverterAPIClient("[YOUR_API_KEY]"))
     "from": "USD",
     "to": "EUR",
     "value": 1,
-    "convertedValue": 0.921456,
-    "rate": 0.921456,
-    "change24h": -0.002134,
-    "change24hPct": -0.2312,
-    "changeDirection": "down",
-    "high24h": 0.924521,
-    "low24h": 0.919823
+    "convertedValue": 0.866496,
+    "rate": 0.866496,
+    "change24h": 0.000493,
+    "change24hPct": 0.0569,
+    "changeDirection": "up",
+    "high24h": 0.866914,
+    "low24h": 0.865725,
+    "lastUpdated": "2026-09-15T21:00:17.674Z"
   }
 }
 ```
@@ -403,7 +412,7 @@ using (var apiClient = new CurrencyConverterAPIClient("[YOUR_API_KEY]"))
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -414,12 +423,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 

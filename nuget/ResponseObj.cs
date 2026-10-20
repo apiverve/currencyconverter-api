@@ -61,6 +61,9 @@ namespace APIVerve.API.CurrencyConverter
 
         [JsonProperty("low24h")]
         public double? Low24H { get; set; }
+
+        [JsonProperty("lastUpdated")]
+        public DateTimeOffset? LastUpdated { get; set; }
     }
 
     public partial class Premium

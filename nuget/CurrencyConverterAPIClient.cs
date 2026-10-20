@@ -69,7 +69,8 @@ namespace APIVerve.API.CurrencyConverter
         {
             { "value", new ValidationRule { Type = "number", Required = true, Min = 0 } },
             { "from", new ValidationRule { Type = "string", Required = true } },
-            { "to", new ValidationRule { Type = "string", Required = true } }
+            { "to", new ValidationRule { Type = "string", Required = true } },
+            { "date", new ValidationRule { Type = "string", Required = false } }
         };
 
         /// <summary>Format validation patterns</summary>
