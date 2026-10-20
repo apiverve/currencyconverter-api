@@ -1,13 +1,12 @@
 Currency Converter API
 ============
 
-Currency Converter is a simple tool for converting currency rates. It returns the converted currency rate based on the amount and currency provided.
+Currency Converter calculates foreign exchange conversions across 170+ currencies using real-time rates. Pass an amount with source and target currency codes to receive the converted total, exchange rate, and 24-hour trend direction.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Currency Converter API](https://currencyconverter.apiverve.com?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-currencyconverter.svg)](https://pypi.org/project/apiverve-currencyconverter/)
+
+This is a Python wrapper for the [Currency Converter API](https://apiverve.com/marketplace/currencyconverter?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-currencyconverter
 
 ## Configuration
 
-Before using the currencyconverter API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Currency Converter API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -47,7 +46,8 @@ api = CurrencyconverterAPIClient("[YOUR_API_KEY]")
 query = {
     "value": 1,
     "from": "USD",
-    "to": "EUR"
+    "to": "EUR",
+    "date": "2025-06-02"
 }
 
 try:
@@ -64,7 +64,7 @@ except Exception as e:
 
 ## Usage
 
-The Currency Converter API documentation is found here: [https://docs.apiverve.com/ref/currencyconverter](https://docs.apiverve.com/ref/currencyconverter?utm_source=pypi&utm_medium=readme).
+The Currency Converter API documentation is found here: [https://docs.apiverve.com/ref/currencyconverter](https://docs.apiverve.com/ref/currencyconverter?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -89,7 +89,8 @@ Using the API client, you can perform requests to the API.
 query = {
     "value": 1,
     "from": "USD",
-    "to": "EUR"
+    "to": "EUR",
+    "date": "2025-06-02"
 }
 ```
 
@@ -113,7 +114,14 @@ print(result)
     "from": "USD",
     "to": "EUR",
     "value": 1,
-    "convertedValue": 0.95466
+    "convertedValue": 0.866496,
+    "rate": 0.866496,
+    "change24h": 0.000493,
+    "change24hPct": 0.0569,
+    "changeDirection": "up",
+    "high24h": 0.866914,
+    "low24h": 0.865725,
+    "lastUpdated": "2026-09-15T21:00:17.674Z"
   }
 }
 ```
@@ -134,7 +142,8 @@ api = CurrencyconverterAPIClient("[YOUR_API_KEY]")
 query = {
     "value": 1,
     "from": "USD",
-    "to": "EUR"
+    "to": "EUR",
+    "date": "2025-06-02"
 }
 
 try:
@@ -159,7 +168,8 @@ api = CurrencyconverterAPIClient("[YOUR_API_KEY]")
 query = {
     "value": 1,
     "from": "USD",
-    "to": "EUR"
+    "to": "EUR",
+    "date": "2025-06-02"
 }
 
 try:
@@ -197,7 +207,8 @@ from apiverve_currencyconverter.apiClient import CurrencyconverterAPIClient, Cur
 query = {
     "value": 1,
     "from": "USD",
-    "to": "EUR"
+    "to": "EUR",
+    "date": "2025-06-02"
 }
 
 # Using context manager ensures proper cleanup
@@ -227,7 +238,8 @@ api = CurrencyconverterAPIClient("[YOUR_API_KEY]", debug=True)
 query = {
     "value": 1,
     "from": "USD",
-    "to": "EUR"
+    "to": "EUR",
+    "date": "2025-06-02"
 }
 
 # Debug information will be printed to console
@@ -246,7 +258,8 @@ api = CurrencyconverterAPIClient("[YOUR_API_KEY]")
 query = {
     "value": 1,
     "from": "USD",
-    "to": "EUR"
+    "to": "EUR",
+    "date": "2025-06-02"
 }
 
 try:
@@ -261,7 +274,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -272,12 +285,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 

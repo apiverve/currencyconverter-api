@@ -10,14 +10,14 @@ if os.path.exists(requirements_file):
 
 setup(
     name='apiverve_currencyconverter',
-    version='1.1.14',
+    version='1.2.2',
     packages=find_packages(),
     include_package_data=True,
     install_requires=install_requires,
-    description='Currency Converter is a simple tool for converting currency rates. It returns the converted currency rate based on the amount and currency provided.',
+    description='Currency Converter calculates foreign exchange conversions across 170+ currencies using real-time rates. Pass an amount with source and target currency codes to receive the converted total, exchange rate, and 24-hour trend direction.',
     author='APIVerve',
     author_email='hello@apiverve.com',
-    url='https://currencyconverter.apiverve.com?utm_source=pypi&utm_medium=homepage',
+    url='https://apiverve.com/marketplace/currencyconverter?utm_source=pypi&utm_medium=referral&utm_content=homepage',
     classifiers=[
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',

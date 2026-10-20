@@ -1,6 +1,6 @@
 import re
-from typing import Dict, Optional, Any
-from dataclasses import dataclass, List
+from typing import Dict, Optional, Any, List
+from dataclasses import dataclass
 import requests
 
 
@@ -26,7 +26,8 @@ class CurrencyconverterAPIClient:
     VALIDATION_RULES = {
         "value": {"type": "number", "required": True, "min": 0},
         "from": {"type": "string", "required": True},
-        "to": {"type": "string", "required": True}
+        "to": {"type": "string", "required": True},
+        "date": {"type": "string", "required": False}
     }
 
     # Format validation patterns
