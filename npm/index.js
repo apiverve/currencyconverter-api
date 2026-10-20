@@ -30,7 +30,7 @@ class currencyconverterWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/currencyconverter';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"value":{"type":"number","required":true,"min":0},"from":{"type":"string","required":true},"to":{"type":"string","required":true}};
+        this.validationRules = {"value":{"type":"number","required":true,"min":0},"from":{"type":"string","required":true},"to":{"type":"string","required":true},"date":{"type":"string","required":false}};
     }
 
     /**

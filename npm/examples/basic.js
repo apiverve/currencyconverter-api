@@ -17,7 +17,8 @@ const api = new currencyconverterAPI({
 var query = {
   value: 1,
   from: "USD",
-  to: "EUR"
+  to: "EUR",
+  date: "2025-06-02"
 };
 
 // Make the API request using callback

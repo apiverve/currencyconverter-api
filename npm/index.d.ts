@@ -35,6 +35,7 @@ declare module '@apiverve/currencyconverter' {
       changeDirection: null | string;
       high24H:         number | null;
       low24H:          number | null;
+      lastUpdated:     Date | null;
   }
 
   export default class currencyconverterWrapper {
