@@ -2,9 +2,10 @@ openapi: 3.0.4
 info:
   title: Currency Converter
   description: >-
-    Currency Converter is a simple tool for converting currency rates. It
-    returns the converted currency rate based on the amount and currency
-    provided.
+    Currency Converter calculates foreign exchange conversions across 170+
+    currencies using real-time rates. Pass an amount with source and target
+    currency codes to receive the converted total, exchange rate, and 24-hour
+    trend direction.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +20,7 @@ servers:
 paths:
   /v1/currencyconverter:
     get:
-      summary: Convert Currency Rates
+      summary: Currency Converter
       description: Convert currency rates based on the amount and currency
       operationId: currencyconverter
       parameters:
@@ -44,6 +45,18 @@ paths:
           required: true
           description: The ISO 4217 currency code to convert to
           example: EUR
+        - name: date
+          in: query
+          schema:
+            type: string
+          required: false
+          description: >-
+            Optional past date (YYYY-MM-DD) to use that day's closing rates
+            instead of live rates. History runs from 1999-01-04 for about 30
+            major currencies and covers every supported currency from March
+            2024. A day with no rates, such as a weekend or holiday, uses the
+            last close before it.
+          example: '2025-06-02'
       responses:
         '200':
           description: Successful Response
@@ -68,13 +81,14 @@ paths:
                   from: USD
                   to: EUR
                   value: 1
-                  convertedValue: 0.921456
-                  rate: 0.921456
-                  change24h: -0.002134
-                  change24hPct: -0.2312
-                  changeDirection: down
-                  high24h: 0.924521
-                  low24h: 0.919823
+                  convertedValue: 0.866496
+                  rate: 0.866496
+                  change24h: 0.000493
+                  change24hPct: 0.0569
+                  changeDirection: up
+                  high24h: 0.866914
+                  low24h: 0.865725
+                  lastUpdated: '2026-09-15T21:00:17.674Z'
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':

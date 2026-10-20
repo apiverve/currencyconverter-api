@@ -1,13 +1,13 @@
-# [Currency Converter API](https://currencyconverter.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Currency Converter API](https://apiverve.com/marketplace/currencyconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Currency Converter is a simple tool for converting currency rates. It returns the converted currency rate based on the amount and currency provided.
+Currency Converter calculates foreign exchange conversions across 170+ currencies using real-time rates. Pass an amount with source and target currency codes to receive the converted total, exchange rate, and 24-hour trend direction.
 
 The Currency Converter API provides a simple, reliable way to integrate currency converter functionality into your applications. Built for developers who need production-ready currency converter capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://currencyconverter.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/currencyconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://currencyconverter.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/currencyconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -163,7 +163,7 @@ go get github.com/apiverve/currencyconverter-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Currency Converter API](https://currencyconverter.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Currency Converter API](https://apiverve.com/marketplace/currencyconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/currencyconverter](https://docs.apiverve.com/ref/currencyconverter)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -216,13 +216,14 @@ A real response from the Currency Converter API:
     "from": "USD",
     "to": "EUR",
     "value": 1,
-    "convertedValue": 0.921456,
-    "rate": 0.921456,
-    "change24h": -0.002134,
-    "change24hPct": -0.2312,
-    "changeDirection": "down",
-    "high24h": 0.924521,
-    "low24h": 0.919823
+    "convertedValue": 0.866496,
+    "rate": 0.866496,
+    "change24h": 0.000493,
+    "change24hPct": 0.0569,
+    "changeDirection": "up",
+    "high24h": 0.866914,
+    "low24h": 0.865725,
+    "lastUpdated": "2026-09-15T21:00:17.674Z"
   }
 }
 ```
@@ -231,7 +232,7 @@ A real response from the Currency Converter API:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Currency Converter API](https://currencyconverter.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Currency Converter API](https://apiverve.com/marketplace/currencyconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
