@@ -1,7 +1,7 @@
 {
     "name": "apiverve/currencyconverter",
-    "description": "Currency Converter is a simple tool for converting currency rates. It returns the converted currency rate based on the amount and currency provided.",
-    "version": "1.2.0",
+    "description": "Currency Converter calculates foreign exchange conversions across 170+ currencies using real-time rates. Pass an amount with source and target currency codes to receive the converted total, exchange rate, and 24-hour trend direction.",
+    "version": "1.2.2",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -15,13 +15,13 @@
         "api",
         "apiverve",
         "currencyconverter",
-        "currency converter",
+        "exchange rate api",
         "currency converter api",
-        "currency converter tool",
-        "currency converter software",
-        "currency converter service"
+        "currency api",
+        "currency exchange rate api",
+        "live fx rates api"
     ],
-    "homepage": "https://currencyconverter.apiverve.com?utm_source=php&utm_medium=homepage",
+    "homepage": "https://apiverve.com/marketplace/currencyconverter?utm_source=php&utm_medium=referral&utm_content=homepage",
     "support": {
         "email": "hello@apiverve.com",
         "docs": "https://docs.apiverve.com/ref/currencyconverter",
