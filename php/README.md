@@ -1,6 +1,6 @@
 # Currency Converter API - PHP Package
 
-Currency Converter is a simple tool for converting currency rates. It returns the converted currency rate based on the amount and currency provided.
+Currency Converter calculates foreign exchange conversions across 170+ currencies using real-time rates. Pass an amount with source and target currency codes to receive the converted total, exchange rate, and 24-hour trend direction.
 
 ## Installation
 
@@ -30,7 +30,8 @@ $client = new Client('YOUR_API_KEY');
 $response = $client->execute([
     'value' => 1,
     'from' => 'USD',
-    'to' => 'EUR'
+    'to' => 'EUR',
+    'date' => '2025-06-02'
 ]);
 
 // Print the response
@@ -46,7 +47,7 @@ use APIVerve\Currencyconverter\Exceptions\APIException;
 use APIVerve\Currencyconverter\Exceptions\ValidationException;
 
 try {
-    $response = $client->execute(['value' => 1, 'from' => 'USD', 'to' => 'EUR']);
+    $response = $client->execute(['value' => 1, 'from' => 'USD', 'to' => 'EUR', 'date' => '2025-06-02']);
     print_r($response['data']);
 } catch (ValidationException $e) {
     echo "Validation error: " . implode(', ', $e->getErrors());
@@ -76,13 +77,14 @@ $client = new Client(
     "from": "USD",
     "to": "EUR",
     "value": 1,
-    "convertedValue": 0.921456,
-    "rate": 0.921456,
-    "change24h": -0.002134,
-    "change24hPct": -0.2312,
-    "changeDirection": "down",
-    "high24h": 0.924521,
-    "low24h": 0.919823
+    "convertedValue": 0.866496,
+    "rate": 0.866496,
+    "change24h": 0.000493,
+    "change24hPct": 0.0569,
+    "changeDirection": "up",
+    "high24h": 0.866914,
+    "low24h": 0.865725,
+    "lastUpdated": "2026-09-15T21:00:17.674Z"
   }
 }
 ```
@@ -94,11 +96,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/currencyconverter?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/currencyconverter?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://currencyconverter.apiverve.com?utm_source=php&utm_medium=readme](https://currencyconverter.apiverve.com?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/currencyconverter?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/currencyconverter?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
