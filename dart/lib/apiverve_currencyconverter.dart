@@ -1,8 +1,8 @@
 /// Currency Converter API client for Dart/Flutter
 ///
-/// Currency Converter is a simple tool for converting currency rates. It returns the converted currency rate based on the amount and currency provided.
+/// Currency Converter calculates foreign exchange conversions across 170+ currencies using real-time rates. Pass an amount with source and target currency codes to receive the converted total, exchange rate, and 24-hour trend direction.
 ///
-/// For more information, visit: https://currencyconverter.apiverve.com?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/currencyconverter?utm_source=dart&utm_medium=referral&utm_content=readme
 library apiverve_currencyconverter;
 
 export 'src/client.dart';
