@@ -62,8 +62,68 @@ namespace APIVerve.API.CurrencyConverter
         [JsonProperty("low24h")]
         public double? Low24H { get; set; }
 
+        [JsonProperty("date")]
+        public DateTimeOffset? Date { get; set; }
+
         [JsonProperty("lastUpdated")]
         public DateTimeOffset? LastUpdated { get; set; }
+
+        [JsonProperty("fromName")]
+        public string FromName { get; set; }
+
+        [JsonProperty("toName")]
+        public string ToName { get; set; }
+
+        [JsonProperty("change1d")]
+        public double? Change1D { get; set; }
+
+        [JsonProperty("change7d")]
+        public double? Change7D { get; set; }
+
+        [JsonProperty("change30d")]
+        public double? Change30D { get; set; }
+
+        [JsonProperty("change1y")]
+        public double? Change1Y { get; set; }
+
+        [JsonProperty("high30d")]
+        public double? High30D { get; set; }
+
+        [JsonProperty("low30d")]
+        public double? Low30D { get; set; }
+
+        [JsonProperty("average30d")]
+        public double? Average30D { get; set; }
+
+        [JsonProperty("volatility30d")]
+        public double? Volatility30D { get; set; }
+
+        [JsonProperty("history")]
+        public History[] History { get; set; }
+
+        [JsonProperty("hourly")]
+        public Hourly[] Hourly { get; set; }
+    }
+
+    public partial class History
+    {
+        [JsonProperty("date")]
+        public DateTimeOffset? Date { get; set; }
+
+        [JsonProperty("rate")]
+        public double? Rate { get; set; }
+    }
+
+    public partial class Hourly
+    {
+        [JsonProperty("hour")]
+        public long? Hour { get; set; }
+
+        [JsonProperty("rate")]
+        public double? Rate { get; set; }
+
+        [JsonProperty("timestamp")]
+        public DateTimeOffset? Timestamp { get; set; }
     }
 
     public partial class Premium
