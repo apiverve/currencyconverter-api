@@ -10,7 +10,7 @@ module APIVerve
     #
     # @example Basic usage
     #   client = APIVerve::Currencyconverter::Client.new(api_key: "your_api_key")
-    #   response = client.execute({ value: 1, from: "USD", to: "EUR", date: "2025-06-02" })
+    #   response = client.execute({ value: 1, from: "USD", to: "EUR", date: "2025-06-02", history: true, hourly: true })
     #   puts response
     #
     # @see https://apiverve.com/marketplace/currencyconverter?utm_source=ruby&utm_medium=referral&utm_content=readme
@@ -19,7 +19,7 @@ module APIVerve
       DEFAULT_TIMEOUT = 30
 
       # Validation rules for parameters
-      VALIDATION_RULES = { 'value' => { type: 'number', required: true, min: 0 }, 'from' => { type: 'string', required: true }, 'to' => { type: 'string', required: true }, 'date' => { type: 'string', required: false } }
+      VALIDATION_RULES = { 'value' => { type: 'number', required: true, min: 0 }, 'from' => { type: 'string', required: true }, 'to' => { type: 'string', required: true }, 'date' => { type: 'string', required: false }, 'history' => { type: 'boolean', required: false }, 'hourly' => { type: 'boolean', required: false, format: 'date' } }
 
       # Format validation patterns
       FORMAT_PATTERNS = {
