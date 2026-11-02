@@ -1,10 +1,10 @@
 [project]
 name = "apiverve-currencyconverter"
-version = "1.2.3"
+version = "1.2.4"
 authors = [
   { name="APIVerve", email="hello@apiverve.com" },
 ]
-description = "Currency Converter calculates foreign exchange conversions across 170+ currencies using real-time rates. Pass an amount with source and target currency codes to receive the converted total, exchange rate, and 24-hour trend direction."
+description = "Currency Converter calculates foreign exchange conversions across 170+ currencies using real-time rates. Pass an amount with source and target currency codes to receive the converted total, exchange rate, both currency names and 24-hour trend direction; paid plans add 1-day to 1-year changes, 30-day stats, and hourly and 30-day history."
 keywords = ["exchange rate api", "currency converter api", "currency api", "currency exchange rate api", "live fx rates api"]
 readme = "README.md"
 requires-python = ">=3.9"
