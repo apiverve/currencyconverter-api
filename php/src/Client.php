@@ -15,7 +15,7 @@ use APIVerve\Currencyconverter\Exceptions\ValidationException;
  * @example Basic usage
  * ```php
  * $client = new Client('your_api_key');
- * $response = $client->execute(['value' => 1, 'from' => 'USD', 'to' => 'EUR', 'date' => '2025-06-02']);
+ * $response = $client->execute(['value' => 1, 'from' => 'USD', 'to' => 'EUR', 'date' => '2025-06-02', 'history' => true, 'hourly' => true]);
  * print_r($response);
  * ```
  *
@@ -37,7 +37,9 @@ class Client
         'value' => ['type' => 'number', 'required' => true, 'min' => 0],
         'from' => ['type' => 'string', 'required' => true],
         'to' => ['type' => 'string', 'required' => true],
-        'date' => ['type' => 'string', 'required' => false]
+        'date' => ['type' => 'string', 'required' => false],
+        'history' => ['type' => 'boolean', 'required' => false],
+        'hourly' => ['type' => 'boolean', 'required' => false, 'format' => 'date']
     ];
 
     /**
