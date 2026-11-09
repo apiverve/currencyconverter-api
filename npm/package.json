@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/currencyconverter",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Currency Converter calculates foreign exchange conversions across 170+ currencies using real-time rates. Pass an amount with source and target currency codes to receive the converted total, exchange rate, both currency names and 24-hour trend direction; paid plans add 1-day to 1-year changes, 30-day stats, and hourly and 30-day history.",
   "main": "index.js",
   "types": "index.d.ts",
