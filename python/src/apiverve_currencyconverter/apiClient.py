@@ -29,7 +29,7 @@ class CurrencyconverterAPIClient:
         "to": {"type": "string", "required": True},
         "date": {"type": "string", "required": False},
         "history": {"type": "boolean", "required": False, "default": False},
-        "hourly": {"type": "boolean", "required": False, "format": "date", "default": False}
+        "hourly": {"type": "boolean", "required": False, "default": False}
     }
 
     # Format validation patterns
