@@ -30,7 +30,9 @@ paths:
           schema:
             type: number
           required: true
-          description: The amount to convert
+          description: >-
+            The amount to convert. A value too large to convert to a finite
+            amount returns a 400
           example: 1
         - name: from
           in: query
