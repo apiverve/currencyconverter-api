@@ -11,7 +11,7 @@ namespace APIVerve.API.CurrencyConverter
     public class CurrencyConverterQueryOptions
     {
         /// <summary>
-        /// The amount to convert
+        /// The amount to convert. A value too large to convert to a finite amount returns a 400
         /// </summary>
         [JsonProperty("value")]
         public double Value { get; set; }
