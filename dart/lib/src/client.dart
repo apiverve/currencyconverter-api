@@ -49,12 +49,12 @@ final _formatPatterns = {
 /// For more information, visit: https://apiverve.com/marketplace/currencyconverter?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
-/// * [value] (required) - The amount to convert [min: 0]
+/// * [value] (required) - The amount to convert. A value too large to convert to a finite amount returns a 400 [min: 0]
 /// * [from] (required) - The ISO 4217 currency code to convert from
 /// * [to] (required) - The ISO 4217 currency code to convert to
 /// * [date] - Optional past date (YYYY-MM-DD) to use that day's closing rates instead of live rates. History runs from 1999-01-04 for about 30 major currencies and covers every supported currency from March 2024. A day with no rates, such as a weekend or holiday, uses the last close before it.
 /// * [history] - Include the pair's daily closing rate for the last 30 days
-/// * [hourly] - Include the pair's rate for each of the last 24 hours (live rates only, not with date) [format: date]
+/// * [hourly] - Include the pair's rate for each of the last 24 hours (live rates only, not with date)
 class CurrencyconverterClient {
   final String apiKey;
   final String baseUrl;
@@ -67,7 +67,7 @@ class CurrencyconverterClient {
     'to': ValidationRule(type: 'string', required: true),
     'date': ValidationRule(type: 'string', required: false),
     'history': ValidationRule(type: 'boolean', required: false),
-    'hourly': ValidationRule(type: 'boolean', required: false, format: 'date'),
+    'hourly': ValidationRule(type: 'boolean', required: false),
   };
 
   CurrencyconverterClient(this.apiKey, {
